@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Rajiv Patel",
+    "age": 41,
+    "gender": "Male",
+    "status": "active",
+    "yearsOfExperience": 7,
+    "experiences": ["Hydroponics", "Organic Vegetables", "Indoor Gardening"],
+    "image": "/images/gardeners/rajiv.jpg",
+    "totalSharedTips": 31,
+    "bio": "Techie turned hydroponics lover helping beginners grow food at home."
+  },
+  {
+    "id": 2,
+    "name": "Samuel Green",
+    "age": 52,
+    "gender": "Male",
+    "status": "active",
+    "yearsOfExperience": 15,
+    "experiences": ["Fruit Trees", "Landscape Planning", "Native Plants"],
+    "image": "/images/gardeners/samuel.jpg",
+    "totalSharedTips": 40,
+    "bio": "Retired botanist sharing 30+ years of backyard and orchard knowledge."
+  },
+  {
+    "id": 3,
+    "name": "Theo Laurent",
+    "age": 44,
+    "gender": "Male",
+    "status": "active",
+    "yearsOfExperience": 10,
+    "experiences": ["Greenhouse Gardening", "Hydroponics", "Rare Plants"],
+    "image": "/images/gardeners/theo.jpg",
+    "totalSharedTips": 22,
+    "bio": "French gardener with a flair for greenhouse innovation and rare herbs."
+  },
+  {
+    "id": 4,
+    "name": "Emir Khan",
+    "age": 36,
+    "gender": "Male",
+    "status": "active",
+    "yearsOfExperience": 8,
+    "experiences": ["Balcony Gardening", "Pest Control", "Herbs"],
+    "image": "/images/gardeners/emir.jpg",
+    "totalSharedTips": 19,
+    "bio": "City gardener making the most of small spaces with organic herbs."
+  },
+  {
+    "id": 5,
+    "name": "Noah Bennett",
+    "age": 33,
+    "gender": "Male",
+    "status": "active",
+    "yearsOfExperience": 5,
+    "experiences": ["DIY Planters", "Succulents", "Composting"],
+    "image": "/images/gardeners/noah.jpg",
+    "totalSharedTips": 17,
+    "bio": "Minimalist gardener specializing in sustainable plant decor."
+  },
+  {
+    "id": 6,
+    "name": "Omar Yusuf",
+    "age": 48,
+    "gender": "Male",
+    "status": "active",
+    "yearsOfExperience": 12,
+    "experiences": ["Soil Care", "Composting", "Irrigation"],
+    "image": "/images/gardeners/omar.jpg",
+    "totalSharedTips": 35,
+    "bio": "Soil health advocate passionate about permaculture and composting."
+  },
+  {
+    "id": 7,
+    "name": "Hiro Tanaka",
+    "age": 39,
+    "gender": "Male",
+    "status": "inactive",
+    "yearsOfExperience": 9,
+    "experiences": ["Bonsai", "Japanese Garden Design", "Zen Gardening"],
+    "image": "/images/gardeners/hiro.jpg",
+    "totalSharedTips": 14,
+    "bio": "Sharing the art of bonsai and peaceful gardening from Kyoto roots."
+  },
+  {
+    "id": 8,
+    "name": "Carlos Mendes",
+    "age": 30,
+    "gender": "Male",
+    "status": "inactive",
+    "yearsOfExperience": 4,
+    "experiences": ["Vertical Gardening", "Aquaponics"],
+    "image": "/images/gardeners/carlos.jpg",
+    "totalSharedTips": 9,
+    "bio": "Young innovator building low-cost vertical gardens in urban areas."
+  },
+  {
+    "id": 9,
+    "name": "Thomas Blake",
+    "age": 46,
+    "gender": "Male",
+    "status": "inactive",
+    "yearsOfExperience": 11,
+    "experiences": ["Tool Maintenance", "Fruit Orchards", "Fertilizers"],
+    "image": "/images/gardeners/thomas.jpg",
+    "totalSharedTips": 12,
+    "bio": "Backyard gardening expert and tools mentor for beginner gardeners."
+  },
+  {
+    "id": 10,
+    "name": "Aditya Sharma",
+    "age": 35,
+    "gender": "Male",
+    "status": "inactive",
+    "yearsOfExperience": 6,
+    "experiences": ["Seed Saving", "Seasonal Planting", "Container Gardening"],
+    "image": "/images/gardeners/aditya.jpg",
+    "totalSharedTips": 11,
+    "bio": "Nature-lover focused on native Indian plants and seed sustainability."
+  }
+]

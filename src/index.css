@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+   themes: light --default;
+ }
+
+.darkGreen{
+color: #0B3D2C;
+}
+.Green{
+  color: #2A7D2E;
+}
+.lightestGreen{
+ color: #7bdcb5;
+}
+.lightGreen{
+  color:#00d084
+}
+.olive{
+  color:#958e09 ;
+}
+.green{
+  color: #94D96B;
+}
+.text-outline {
+  -webkit-text-stroke: 1px #7bdcb5;
+}
+button:hover{
+  background-color:#00d084;
+  border-color: #0B3D2C;
+}
