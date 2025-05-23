@@ -11,6 +11,7 @@ import AuthProvider from './Provider/AuthProvider.jsx'
 import AddTip from './Components/AddTip.jsx'
 import TipsTable from './Components/TipsTable.jsx'
 import TipDetails from './Components/TipDetails.jsx'
+import MyTips from './Components/MyTips.jsx'
 
 const router=createBrowserRouter([
   {
@@ -42,6 +43,11 @@ const router=createBrowserRouter([
         path:'/Browse-tips/:id',
         loader:({params})=>fetch(`http://localhost:3000/sharedtips/${params.id}`),
         Component:TipDetails
+      },
+      {
+        path:'/My-tips/:email',
+        loader:({params})=>fetch(`http://localhost:3000/sharedtips/email/${params.email}`),
+        Component:MyTips
       }
     ]
   }

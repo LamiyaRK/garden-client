@@ -6,7 +6,7 @@ const Tips = ({tip}) => {
     
     return (
        
-            <tr className='border-green-400 text-green-950 '>
+            <tr className=' text-green-950 '>
         <td>
           <div className="flex items-center gap-3 w-full ">
             <div className="avatar">
