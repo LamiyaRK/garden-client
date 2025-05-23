@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import Tips from './Tips';
 import logo from '/llogo.jpg'; 
+import { AuthContext } from '../Context/AuthContext';
 const TipsTable = () => {
-    const [tips,setTips]=useState([]);
+   
+   const [tips1,setTips1]=useState([])
     useEffect(()=>{
         fetch('http://localhost:3000/sharedtips').
         then(res=>res.json())
         .then(data=>{
+          
             const data1=data.filter(da=>da.availability==='Public')
         
-            setTips(data1)})
+            setTips1(data1)})
         .catch(err=>{
             toast(err,{
                             type:"error",
@@ -47,7 +50,7 @@ const TipsTable = () => {
     <tbody>
      
       {
-        tips.map(tip=><Tips tip={tip}></Tips>)
+        tips1.map(tip=><Tips tip={tip}></Tips>)
       }
       
      

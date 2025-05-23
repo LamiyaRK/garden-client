@@ -3,7 +3,7 @@ import logo from '/llogo.jpg';
 import { AuthContext } from '../Context/AuthContext';
 import { toast } from 'react-toastify';
 const AddTip = () => {
-     const {user}=use(AuthContext);
+     const {user,tips,setTips}=use(AuthContext);
      console.log(user)
 const addtip=e=>{
    
@@ -17,10 +17,12 @@ const addtip=e=>{
          "content-type":   "application/json"},
          body:JSON.stringify(data)
     })
-    .then(res=> toast("Tip shared successfully",{
+    .then(res=>{ toast("Tip shared successfully",{
                 type:"success",
                 theme:"colored"
-            }))
+            })
+            setTips(...tips,data)
+        })
     .catch(err=> toast(err,{
                 type:"error",
                 theme:"colored"

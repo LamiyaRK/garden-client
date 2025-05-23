@@ -12,6 +12,8 @@ import AddTip from './Components/AddTip.jsx'
 import TipsTable from './Components/TipsTable.jsx'
 import TipDetails from './Components/TipDetails.jsx'
 import MyTips from './Components/MyTips.jsx'
+import UpdateTip from './Components/UpdateTip.jsx'
+import ExploreGardeners from './Components/ExploreGardeners.jsx'
 
 const router=createBrowserRouter([
   {
@@ -48,6 +50,15 @@ const router=createBrowserRouter([
         path:'/My-tips/:email',
         loader:({params})=>fetch(`http://localhost:3000/sharedtips/email/${params.email}`),
         Component:MyTips
+      },
+      {
+        path:'/updateTip/:id',
+         loader:({params})=>fetch(`http://localhost:3000/sharedtips/${params.id}`),
+        Component:UpdateTip
+      },{
+        path:'/explore-gardeners',
+        loader:()=>fetch('http://localhost:3000/gardeners'),
+        Component:ExploreGardeners
       }
     ]
   }

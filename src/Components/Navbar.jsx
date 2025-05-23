@@ -6,13 +6,13 @@ import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
 const Navbar = () => {
   const {user,hanldlogout,setUser}=use(AuthContext);
-  console.log(user)
+ // console.log(user)
     const list=<>
       <Link to='/'> <li><a>Home</a></li></Link> 
       <Link to='/Share-a-garden-tip'><li><a> Share a Garden Tip</a></li></Link> 
      <Link to='/Browse-tips'>  <li><a> Browse Tips</a></li></Link>
-         <li><a> Explore Gardeners</a></li>
-      <Link to={`/My-tips/${user.email}`}> <li><a> My Tips </a></li></Link>   
+     <Link to='/explore-gardeners' > <li><a> Explore Gardeners</a></li></Link>  
+      <Link to={`/My-tips/${user?.email}`}> <li><a> My Tips </a></li></Link>   
            
     </>
    // console.log(user)

@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
 import Mytip from './Mytip';
 import logo from '/llogo.jpg'; 
 
 const MyTips = () => {
     const data=useLoaderData();
-    console.log(data)
+   
+     const [delTip,setDelTip]=useState(data)
     return (
         <div>
             <div className="overflow-x-auto w-5/6 mx-auto my-[80px]">
@@ -29,7 +30,7 @@ const MyTips = () => {
     </thead>
     <tbody>
       {
-        data.map(da=><Mytip key={da._id} da={da}></Mytip>)
+        data.map(da=><Mytip key={da._id} da={da} delTip={delTip} setDelTip={setDelTip}></Mytip>)
       }
       
       
