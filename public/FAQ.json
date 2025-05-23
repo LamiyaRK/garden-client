@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is Verdantia?",
+    "answer": "Verdantia is a platform where gardening enthusiasts can share tips, experiences, and connect with others who love plants and nature."
+  },
+  {
+    "question": "How can I share a gardening tip?",
+    "answer": "After logging in, go to the 'Share Tips' section, fill out the form with your tip details, and submit it."
+  },
+  {
+    "question": "Is it free to use?",
+    "answer": "Yes, our platform is completely free for all users."
+  },
+  {
+    "question": "How are the most liked tips selected?",
+    "answer": "Tips with the highest number of likes are automatically shown at the top in the 'Popular Tips' section."
+  },
+  {
+    "question": "Can I edit or delete my shared tips?",
+    "answer": "Yes, you can view all your tips in the 'My Tips' section where you can edit or delete them anytime."
+  }
+]
