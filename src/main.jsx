@@ -14,6 +14,7 @@ import TipDetails from './Components/TipDetails.jsx'
 import MyTips from './Components/MyTips.jsx'
 import UpdateTip from './Components/UpdateTip.jsx'
 import ExploreGardeners from './Components/ExploreGardeners.jsx'
+import Error from './Components/Error.jsx'
 
 const router=createBrowserRouter([
   {
@@ -59,9 +60,14 @@ const router=createBrowserRouter([
         path:'/explore-gardeners',
         loader:()=>fetch('http://localhost:3000/gardeners'),
         Component:ExploreGardeners
+      },
+      {
+        path:"/*",
+        Component:Error
       }
     ]
-  }
+  },
+  
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
