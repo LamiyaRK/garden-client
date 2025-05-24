@@ -1,4 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
 @import "tailwindcss";
+
 @plugin "daisyui" {
    themes: light --default;
  }
@@ -35,4 +40,10 @@ button:hover{
  color:#00d084;
  font-weight:600;
  text-decoration: underline;
+}
+body{
+ font-family: "Raleway", sans-serif;
+}
+h1{
+  font-family: "Rancho", cursive;
 }

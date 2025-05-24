@@ -6,10 +6,10 @@ import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Context/AuthContext';
 
-const Mytip = ({da,setDelTip,delTip}) => {
+const Mytip = ({da,data,setData}) => {
     const {_id,image,title,category,availability,difficulty,type}=da
+     const {tips,setTips}=use(AuthContext)
     
-    console.log(delTip)
    const deleteTip=()=>{
     
 
@@ -35,8 +35,8 @@ const Mytip = ({da,setDelTip,delTip}) => {
       text: "Your file has been deleted.",
       icon: "success"
     });
-         const remainingtips= delTip.filter(tipi=>tipi._id!=_id);
-        setDelTip( remainingtips)
+         const remainingtips= data.filter(tipi=>tipi._id!=_id);
+        setData( remainingtips)
         console.log(remainingtips) 
       
     }).catch(err=>{
@@ -50,7 +50,7 @@ const Mytip = ({da,setDelTip,delTip}) => {
     })
   
    }
-   
+  
     return (
          <tr className='text-green-950'>
         

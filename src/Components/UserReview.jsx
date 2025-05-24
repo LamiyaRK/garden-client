@@ -19,7 +19,7 @@ const UserReview = ({da}) => {
   <div className="hero-overlay "></div>
   <div className="hero-content text-accent text-center">
     <div className="max-w-md flex flex-col relative">
-      <h1 className="mb-5  font-bold flex  ">{comment}</h1>
+      <p className="mb-5  font-bold flex  ">{comment}</p>
       <p className="mb-5 ">
         {name}
       </p>

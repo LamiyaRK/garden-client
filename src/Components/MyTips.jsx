@@ -4,9 +4,9 @@ import Mytip from './Mytip';
 import logo from '/llogo.jpg'; 
 
 const MyTips = () => {
-    const data=useLoaderData();
+    
    
-     const [delTip,setDelTip]=useState(data)
+     const [data,setData]=useState(useLoaderData())
     return (
         <div>
             <div className="overflow-x-auto w-5/6 mx-auto my-[80px]">
@@ -30,7 +30,7 @@ const MyTips = () => {
     </thead>
     <tbody>
       {
-        data.map(da=><Mytip key={da._id} da={da} delTip={delTip} setDelTip={setDelTip}></Mytip>)
+        data.map(da=><Mytip key={da._id} da={da} data={data} setData={setData}></Mytip>)
       }
       
       
