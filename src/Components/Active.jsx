@@ -6,7 +6,7 @@ import TypewriterH1 from './TypeWriterH1';
 const Active = () => {
     const [activeUsers,setActiveUsers]=useState([])
     useEffect(()=>{
- fetch('http://localhost:3000/gardeners')
+ fetch('https://garden-server-beta.vercel.app/gardeners')
     .then(res=>res.json())
     .then(data=>{
          const acUsers=data.filter(ac=>ac.status==='active')

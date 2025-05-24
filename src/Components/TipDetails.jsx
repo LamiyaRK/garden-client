@@ -7,7 +7,7 @@ const TipDetails = () => {
    const {_id,title,type,difficulty,description,image,category,name,totalLiked}=data
    const [like,setLike]=useState(totalLiked||0)
    const handleLikes=()=>{
-    fetch(`http://localhost:3000/sharedtips/${_id}`,{
+    fetch(`https://garden-server-beta.vercel.app/sharedtips/${_id}`,{
       method:'PATCH',
       headers:{
         'Content-Type': 'application/json'

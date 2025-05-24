@@ -33,7 +33,7 @@ const AuthProvider = ({children}) => {
     },[])
 
      useEffect(()=>{
-            fetch('http://localhost:3000/sharedtips').
+            fetch('https://garden-server-beta.vercel.app/sharedtips').
             then(res=>res.json())
             .then(data=>{
                 setTips(data)

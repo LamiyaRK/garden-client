@@ -44,30 +44,30 @@ const router=createBrowserRouter([
       },
       {
         path:'/Browse-tips',
-        loader:()=> fetch('http://localhost:3000/sharedtips'),
+        loader:()=> fetch('https://garden-server-beta.vercel.app/sharedtips'),
         Component:TipsTable,
         hydrateFallbackElement:<Loader></Loader>
       },
       {
         path:'/Browse-tips/:id',
-        loader:({params})=>fetch(`http://localhost:3000/sharedtips/${params.id}`),
+        loader:({params})=>fetch(`https://garden-server-beta.vercel.app/sharedtips/${params.id}`),
        element:<PrivateRoute><TipDetails></TipDetails></PrivateRoute>,
        hydrateFallbackElement:<Loader></Loader>
       },
       {
         path:'/My-tips/:email',
-        loader:({params})=>fetch(`http://localhost:3000/sharedtips/email/${params.email}`),
+        loader:({params})=>fetch(`https://garden-server-beta.vercel.app/sharedtips/email/${params.email}`),
        element:<PrivateRoute><MyTips></MyTips></PrivateRoute>,
        hydrateFallbackElement:<Loader></Loader>
       },
       {
         path:'/updateTip/:id',
-         loader:({params})=>fetch(`http://localhost:3000/sharedtips/${params.id}`),
+         loader:({params})=>fetch(`https://garden-server-beta.vercel.app/sharedtips/${params.id}`),
         element:<PrivateRoute><UpdateTip></UpdateTip></PrivateRoute>,
         hydrateFallbackElement:<Loader></Loader>
       },{
         path:'/explore-gardeners',
-        loader:()=>fetch('http://localhost:3000/gardeners'),
+        loader:()=>fetch('https://garden-server-beta.vercel.app/gardeners'),
         Component:ExploreGardeners,
         hydrateFallbackElement:<Loader></Loader>
       },

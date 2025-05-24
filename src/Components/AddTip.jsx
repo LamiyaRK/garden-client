@@ -11,7 +11,7 @@ const addtip=e=>{
     const form=e.target;
     const formdata=new FormData(form);
     const data=Object.fromEntries(formdata.entries());
-    fetch('http://localhost:3000/sharedtips',{
+    fetch('https://garden-server-beta.vercel.app/sharedtips',{
         method:'post',
         headers:{
          "content-type":   "application/json"},

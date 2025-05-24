@@ -24,7 +24,7 @@ const Mytip = ({da,data,setData}) => {
 }).then((result) => {
   if (result.isConfirmed) {
     
-    fetch(`http://localhost:3000/sharedtips/${_id}`,{
+    fetch(`https://garden-server-beta.vercel.app/sharedtips/${_id}`,{
         method:'delete'
     }).then( res=>{
          res.json()

@@ -6,7 +6,7 @@ import { Fade } from 'react-awesome-reveal';
 const TrendingTips = () => {
     const [data,setData]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:3000/sharedtips/sorted/sortedlist/arr')
+        fetch('https://garden-server-beta.vercel.app/sharedtips/sorted/sortedlist/arr')
         .then(res=>res.json())
         .then(dat=>{
             setData(dat)

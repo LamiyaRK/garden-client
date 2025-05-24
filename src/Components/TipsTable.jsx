@@ -15,7 +15,7 @@ const TipsTable = () => {
     
             const val=e.target.value;
              setSelected(val)
-           fetch(`http://localhost:3000/sharedtips/diff/easy/medium/hard/${val}`)
+           fetch(`https://garden-server-beta.vercel.app/sharedtips/diff/easy/medium/hard/${val}`)
            .then(res=>res.json())
            .then(data=>{setStored(data)
           console.log(val)}).

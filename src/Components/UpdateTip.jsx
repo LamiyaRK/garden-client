@@ -9,7 +9,7 @@ const UpdateTip = () => {
          const form=e.target;
          const formdata=new FormData(form);
          const data=Object.fromEntries(formdata.entries());
-         fetch(`http://localhost:3000/sharedtips/${_id}`,{
+         fetch(`https://garden-server-beta.vercel.app/sharedtips/${_id}`,{
              method:'put',
              headers:{
               "content-type":"application/json"},
