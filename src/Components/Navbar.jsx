@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { AiFillSun } from 'react-icons/ai';
+import { Tooltip } from 'react-tooltip'
 const Navbar = () => {
  
   const {user,hanldlogout,setUser,theme,setTheme}=use(AuthContext);
@@ -73,29 +74,39 @@ const Navbar = () => {
  <Link to='/login'><a class="btn text-[#0B3D2C] hover:text-white hover:bg-[#2A7D2E]">Login</a></Link>   
   <Link to='/register'><a class="btn text-[#0B3D2C] hover:text-white hover:bg-[#2A7D2E]">Sign Up</a></Link>   
   </div>:  
-  <div class="navbar-end flex gap-3 md:pr-5  ">
-  
-{theme?<button className='btn' onClick={handleTheme}><AiFillSun size={24} /></button>:<button className='btn' onClick={handleTheme}><FaMoon/></button>}
-  <div className="dropdown dropdown-end text-green-950  ">
-  <div className='group'>
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img
-            alt="Tailwind CSS Navbar component"
-            src={user.photoURL} />
-        </div>
-        
+  <div className="navbar-end flex items-center gap-3 md:pr-5">
+
+  {/* Theme Toggle */}
+  <button className="btn" onClick={handleTheme}>
+    {theme ? <AiFillSun size={24} /> : <FaMoon />}
+  </button>
+
+  {/* Profile Dropdown */}
+  <div className="dropdown dropdown-end">
+    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+      <div className="w-10 rounded-full">
+     <a data-tooltip-id="my-tooltip"
+  data-tooltip-content={user?.displayName}
+  data-tooltip-place="top"> <img alt="User Avatar" src={user?.photoURL} /></a>  
       </div>
-      <p className=' text-white opacity-0 group-hover:opacity-100 '>{user.displayName}</p>
-      </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-       
-        <li><button className='btn bg-[#0B3D2C] text-white ' onClick={handleLogout}>Logout</button></li>
-      </ul>
-      </div>
-      </div>  
+    </div>
+
+    {/* Dropdown Content */}
+    <ul
+      tabIndex={0}
+      className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
+    >
+     
+      <li>
+        <button className="btn bg-[#0B3D2C] text-white w-full" onClick={handleLogout}>
+          Logout
+        </button>
+      </li>
+    </ul>
+  </div>
+  <Tooltip id="my-tooltip" />
+</div>
+
 } 
 </div>
         </div>

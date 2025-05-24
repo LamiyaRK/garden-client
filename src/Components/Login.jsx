@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 
 const Login = () => {
-    const {user,setUser,handlelogin}=use(AuthContext)
+    const {handlelogin,goSignup}=use(AuthContext)
     const loc=useLocation();
     console.log(loc)
     const navigate=useNavigate()
@@ -22,7 +22,7 @@ const Login = () => {
           title: 'Login Successful!',
           icon: 'success',
         });
-        navigate(location.state || '/');
+        navigate(loc.state || '/');
       })
       .catch(err =>
         toast(err.message || 'Login failed', {
@@ -31,6 +31,22 @@ const Login = () => {
         })
       );
   };
+   const gRegister=()=>{
+          goSignup().then(res => {
+                  Swal.fire({
+                    title: 'Login Successful!',
+                    icon: 'success',
+                  });
+                  navigate( '/');
+                })
+                .catch(err =>
+                  toast(err.message || 'Login failed', {
+                    type: 'error',
+                    theme: 'colored',
+                  })
+                );
+            };
+      
     return (
         <div className='flex justify-center  '>
             <form class="fieldset bg-green-100 border-green-500 rounded-box w-sm border p-10 my-[120px] py-10" onSubmit={handleLogin}>
@@ -43,7 +59,7 @@ const Login = () => {
   <input type="password" class="input" placeholder="Password" name='pass' />
 
   <button class="btn bg-[#0B3D2C] text-white mt-3 border-2 ">Login</button>
-  <button className='btn bg-[#0B3D2C] text-white mt-3  flex items-center'><FaGoogle/> Login With Google</button>
+  <button className='btn bg-[#0B3D2C] text-white mt-3  flex items-center' onClick={gRegister}><FaGoogle/> Login With Google</button>
   <p className='text-[#0B3D2C] '>Don't have an accout?<Link to='/register' className='underline'><span className='font-semibold text-md'>Register</span></Link></p>
 </form>
         </div>

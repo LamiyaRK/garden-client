@@ -71,12 +71,13 @@ const router=createBrowserRouter([
         Component:ExploreGardeners,
         hydrateFallbackElement:<Loader></Loader>
       },
-      {
+      
+    ]
+  },
+  {
         path:"/*",
         Component:Error
       }
-    ]
-  },
   
 ])
 createRoot(document.getElementById('root')).render(

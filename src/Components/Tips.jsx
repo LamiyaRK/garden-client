@@ -26,7 +26,7 @@ const Tips = ({tip}) => {
          
         </td>
         <th>
-      <Link to={`/Browse-tips/${tip._id}`}><button className="btn btn-ghost btn-xs bg-green-950 border-green-400 border-2 text-white">See More</button></Link>    
+      <Link to={`/Browse-tips/${tip._id}`}><button className="btn btn-ghost btn-xs bg-green-950 border-green-400 h-[30px] border-2 text-white">See More</button></Link>    
         </th>
       </tr>
         

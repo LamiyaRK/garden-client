@@ -15,8 +15,17 @@ const TipsTable = () => {
     
             const val=e.target.value;
              setSelected(val)
-            const sorted=tips1.filter(tip=>tip.difficulty===val)
-            setStored(sorted)
+           fetch(`http://localhost:3000/sharedtips/diff/easy/medium/hard/${val}`)
+           .then(res=>res.json())
+           .then(data=>{setStored(data)
+          console.log(val)}).
+         catch(err=>{
+          toast(err,{
+            theme:'colored',
+            type:'error'
+          })
+         })
+            
     }
     return (
         <div className='my-[80px]'>

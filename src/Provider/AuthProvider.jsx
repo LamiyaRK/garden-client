@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { AuthContext } from '../Context/AuthContext';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import { auth } from '../Firesbase/Firesbase.config';
 import { toast } from 'react-toastify';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const AuthProvider = ({children}) => {
+    const provider=new GoogleAuthProvider();
  const [user,setUser]=useState(null)
   const [tips,setTips]=useState([]);
   const [theme,setTheme]=useState(false)
@@ -29,6 +31,7 @@ const AuthProvider = ({children}) => {
        
         }
     },[])
+
      useEffect(()=>{
             fetch('http://localhost:3000/sharedtips').
             then(res=>res.json())
@@ -44,7 +47,9 @@ const AuthProvider = ({children}) => {
                             })
             })
         },[])
-      
+      const goSignup=()=>{
+        return signInWithPopup(auth,provider);
+      }
     const updateUserInfo=(updateData)=>{
         return updateProfile(auth.currentUser,updateData);
 
@@ -65,7 +70,8 @@ const AuthProvider = ({children}) => {
  theme,
  setTheme,
  loading,
- setLoading
+ setLoading,
+ goSignup
  
     }
     return (
