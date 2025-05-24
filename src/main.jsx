@@ -15,6 +15,7 @@ import MyTips from './Components/MyTips.jsx'
 import UpdateTip from './Components/UpdateTip.jsx'
 import ExploreGardeners from './Components/ExploreGardeners.jsx'
 import Error from './Components/Error.jsx'
+import PrivateRoute from './Routes/PrivateRoute.jsx'
 
 const router=createBrowserRouter([
   {
@@ -36,7 +37,7 @@ const router=createBrowserRouter([
       },
       {
         path:'/Share-a-garden-tip',
-        Component:AddTip
+        element:<PrivateRoute><AddTip></AddTip></PrivateRoute>
       },
       {
         path:'/Browse-tips',
@@ -46,17 +47,17 @@ const router=createBrowserRouter([
       {
         path:'/Browse-tips/:id',
         loader:({params})=>fetch(`http://localhost:3000/sharedtips/${params.id}`),
-        Component:TipDetails
+       element:<PrivateRoute><TipDetails></TipDetails></PrivateRoute>
       },
       {
         path:'/My-tips/:email',
         loader:({params})=>fetch(`http://localhost:3000/sharedtips/email/${params.email}`),
-        Component:MyTips
+       element:<PrivateRoute><MyTips></MyTips></PrivateRoute>
       },
       {
         path:'/updateTip/:id',
          loader:({params})=>fetch(`http://localhost:3000/sharedtips/${params.id}`),
-        Component:UpdateTip
+        element:<PrivateRoute><UpdateTip></UpdateTip></PrivateRoute>
       },{
         path:'/explore-gardeners',
         loader:()=>fetch('http://localhost:3000/gardeners'),

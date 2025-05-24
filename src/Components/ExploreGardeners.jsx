@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { use } from 'react';
 import { useLoaderData } from 'react-router';
 import Gardener from './Gardener';
 import logo from '/llogo.jpg'
+import { AuthContext } from '../Context/AuthContext';
 const ExploreGardeners = () => {
     const gardeners=useLoaderData()
-    console.log(gardeners)
+    const {theme}=use(AuthContext);
     return (
-        <div className='bg-green-50'>
+        <div className={`${theme}?"bg-black": "bg-green-50"`}>
          <div className='w-5/6 mx-auto py-[100px] '>
         <div className='flex items-center justify-center '>
             <p className='badge text-xl bg-[#2A7D2E] h-12 rounded-3xl text-white text-center'> Meet Our  Gardeners</p>

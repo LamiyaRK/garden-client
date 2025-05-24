@@ -6,11 +6,11 @@ import { ToastContainer } from 'react-toastify';
 import { AuthContext } from '../Context/AuthContext';
 
 const HomeLayout = () => {
-const [theme,setTheme]=useState(false)
-console.log(theme)
+ const {theme}=use(AuthContext)
+
     return (
         <div className={`${theme==1?'bg-black':'bg-white'}`}>
-            <Navbar theme={theme} setTheme={setTheme}></Navbar>
+            <Navbar ></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
             <ToastContainer></ToastContainer>

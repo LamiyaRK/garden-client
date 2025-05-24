@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 const AuthProvider = ({children}) => {
  const [user,setUser]=useState(null)
   const [tips,setTips]=useState([]);
+  const [theme,setTheme]=useState(false)
   const  handlelogin=(email,pass)=>{
         return signInWithEmailAndPassword(auth,email,pass);
     }
@@ -57,6 +58,8 @@ const AuthProvider = ({children}) => {
  updateUserInfo,
  tips,
  setTips,
+ theme,
+ setTheme
  
     }
     return (
