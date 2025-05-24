@@ -4,7 +4,9 @@ import { Link } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
 import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
-const Navbar = () => {
+import { FaMoon, FaSun } from 'react-icons/fa';
+import { AiFillSun } from 'react-icons/ai';
+const Navbar = ({theme,setTheme}) => {
   const {user,hanldlogout,setUser}=use(AuthContext);
  // console.log(user)
     const list=<>
@@ -15,7 +17,13 @@ const Navbar = () => {
       <Link to={`/My-tips/${user?.email}`}> <li><a> My Tips </a></li></Link>   
            
     </>
-   // console.log(user)
+   console.log(theme)
+   const handleTheme=()=>{
+    if(theme==false)
+    setTheme(true)
+  else
+  setTheme(false)
+   }
     const handleLogout=()=>{
       hanldlogout().then(res=>{
         Swal.fire({
@@ -57,11 +65,16 @@ const Navbar = () => {
        {list}
     </ul>
   </div>
+ 
  {!user?<div class="navbar-end flex gap-3 pr-5">
+
+{theme?<button className='btn' onClick={handleTheme}><AiFillSun size={24} /></button>:<button className='btn' onClick={handleTheme}><FaMoon/></button>}
  <Link to='/login'><a class="btn text-[#0B3D2C] hover:text-white hover:bg-[#2A7D2E]">Login</a></Link>   
   <Link to='/register'><a class="btn text-[#0B3D2C] hover:text-white hover:bg-[#2A7D2E]">Sign Up</a></Link>   
   </div>:  
   <div class="navbar-end flex gap-3 pr-5">
+  
+{theme?<button className='btn' onClick={handleTheme}><AiFillSun size={24} /></button>:<button className='btn' onClick={handleTheme}><FaMoon/></button>}
   <div className="dropdown dropdown-end text-green-950  ">
   <div className='group'>
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">

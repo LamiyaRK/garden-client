@@ -39,6 +39,7 @@ const AuthProvider = ({children}) => {
                             })
             })
         },[])
+      
     const updateUserInfo=(updateData)=>{
         return updateProfile(auth.currentUser,updateData);
 
@@ -55,7 +56,8 @@ const AuthProvider = ({children}) => {
  hanldlogout,
  updateUserInfo,
  tips,
- setTips
+ setTips,
+ 
     }
     return (
        <AuthContext.Provider value={userInfo}>

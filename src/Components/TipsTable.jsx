@@ -3,25 +3,21 @@ import { toast } from 'react-toastify';
 import Tips from './Tips';
 import logo from '/llogo.jpg'; 
 import { AuthContext } from '../Context/AuthContext';
+import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import { useLoaderData } from 'react-router';
 const TipsTable = () => {
+  
+   const [tips1,setTips1]=useState(useLoaderData())
+   const [stored,setStored]=useState([])
    
-   const [tips1,setTips1]=useState([])
-    useEffect(()=>{
-        fetch('http://localhost:3000/sharedtips').
-        then(res=>res.json())
-        .then(data=>{
-          
-            const data1=data.filter(da=>da.availability==='Public')
-        
-            setTips1(data1)})
-        .catch(err=>{
-            toast(err,{
-                            type:"error",
-                            theme:"colored"
-                        })
-        })
-    },[])
-    //console.log(tips)
+    const [selected,setSelected]=useState('')
+    const handleSort=(e)=>{
+    
+            const val=e.target.value;
+             setSelected(val)
+            const sorted=tips1.filter(tip=>tip.difficulty===val)
+            setStored(sorted)
+    }
     return (
         <div className='my-[80px]'>
         <div className="flex items-center justify-center gap-3 mt-6 w-5/6 mx-auto ">
@@ -31,10 +27,18 @@ const TipsTable = () => {
                 <img src={logo} alt="logo" className="h-[60px]" />
               </div>
               <div>
-          <h1 className="text-3xl font-bold text-center mb-3">Explore Public Tips</h1>
-          <p className="w-[70%] mx-auto text-center mb-6">
+          <h1 className='text-3xl text-[#0B3D2C] font-bold mb-5 text-center'>Explore Public Tips</h1>
+          <p className="w-[70%] mx-auto text-center mb-6 text-gray-500">
             Discover helpful tips shared publicly by our community. Browse tips by category and click the eye icon to view full details.
-</p>
+</p> 
+<div className='flex justify-center mb-8'>
+  <select class="select" onChange={handleSort} Value={selected}>
+  <option disabled selected>Sort by<MdOutlineKeyboardArrowDown /></option>
+  <option>Easy</option>
+  <option>Medium</option>
+  <option>Hard</option>
+</select>
+</div>
         </div>
             <div className="overflow-x-auto w-5/6 mx-auto">
   <table className="table bg-green-50 rounded-2xl ">
@@ -49,9 +53,11 @@ const TipsTable = () => {
     </thead>
     <tbody>
      
-      {
-        tips1.map(tip=><Tips tip={tip}></Tips>)
-      }
+      
+        {(stored.length > 0 ? stored : tips1).map((tip, index) => (
+  <Tips key={index} tip={tip} />
+))}
+      
       
      
     </tbody>

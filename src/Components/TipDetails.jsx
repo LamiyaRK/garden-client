@@ -23,7 +23,7 @@ const TipDetails = () => {
    }
     return (
         <div className='mx-auto w-5/6 bg-green-50 p-10 border-2 border-green-400 rounded-3xl my-[80px] shadow-2xl shadow-green-100'>
-        <div className='flex justify-around items-center '>
+        <div className='flex justify-around items-center gap-5'>
             <div className='w-1/2'>
                 <img src={image} className='h-[500px] rounded-3xl'></img>
             </div>
