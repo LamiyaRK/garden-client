@@ -4,7 +4,7 @@ import { AuthContext } from '../Context/AuthContext';
 import { toast } from 'react-toastify';
 const AddTip = () => {
      const {user,tips,setTips}=use(AuthContext);
-     console.log(user)
+    // console.log(user)
 const addtip=e=>{
    
     e.preventDefault();

@@ -1,38 +1,36 @@
 import React, { use } from 'react';
 import { FaGoogle } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 
 const Login = () => {
     const {user,setUser,handlelogin}=use(AuthContext)
+    const loc=useLocation();
+    console.log(loc)
     const navigate=useNavigate()
- const handleLogin=e=>{
+  const handleLogin = e => {
     e.preventDefault();
-    const form=e.target;
-   
-    const formdata=new FormData(form);
-    const info=Object.fromEntries(formdata.entries());
-    const {email,pass}=info;
-   handlelogin(email,pass)
-   .then(res=>{
-    Swal.fire({
-  title: "Login Successful!",
-  icon: "success",
-  draggable: true
-  
-}
-);
-navigate('/');
-   })
-.catch(err=>
-    toast(err,{
-        type:"error",
-        theme:"colored"
-    })
-)
- }
+    const form = e.target;
+    const formData = new FormData(form);
+    const { email, pass } = Object.fromEntries(formData.entries());
+
+    handlelogin(email, pass)
+      .then(res => {
+        Swal.fire({
+          title: 'Login Successful!',
+          icon: 'success',
+        });
+        navigate(location.state || '/');
+      })
+      .catch(err =>
+        toast(err.message || 'Login failed', {
+          type: 'error',
+          theme: 'colored',
+        })
+      );
+  };
     return (
         <div className='flex justify-center  '>
             <form class="fieldset bg-green-100 border-green-500 rounded-box w-sm border p-10 my-[120px] py-10" onSubmit={handleLogin}>

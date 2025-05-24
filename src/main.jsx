@@ -16,6 +16,7 @@ import UpdateTip from './Components/UpdateTip.jsx'
 import ExploreGardeners from './Components/ExploreGardeners.jsx'
 import Error from './Components/Error.jsx'
 import PrivateRoute from './Routes/PrivateRoute.jsx'
+import Loader from './Components/Loader.jsx'
 
 const router=createBrowserRouter([
   {
@@ -25,7 +26,8 @@ const router=createBrowserRouter([
       {
         index:true,
         path:'/',
-        Component:Home
+        Component:Home,
+       
       },
       {
         path:'/login',
@@ -37,31 +39,37 @@ const router=createBrowserRouter([
       },
       {
         path:'/Share-a-garden-tip',
-        element:<PrivateRoute><AddTip></AddTip></PrivateRoute>
+        element:<PrivateRoute><AddTip></AddTip></PrivateRoute>,
+       
       },
       {
         path:'/Browse-tips',
         loader:()=> fetch('http://localhost:3000/sharedtips'),
-        Component:TipsTable
+        Component:TipsTable,
+        hydrateFallbackElement:<Loader></Loader>
       },
       {
         path:'/Browse-tips/:id',
         loader:({params})=>fetch(`http://localhost:3000/sharedtips/${params.id}`),
-       element:<PrivateRoute><TipDetails></TipDetails></PrivateRoute>
+       element:<PrivateRoute><TipDetails></TipDetails></PrivateRoute>,
+       hydrateFallbackElement:<Loader></Loader>
       },
       {
         path:'/My-tips/:email',
         loader:({params})=>fetch(`http://localhost:3000/sharedtips/email/${params.email}`),
-       element:<PrivateRoute><MyTips></MyTips></PrivateRoute>
+       element:<PrivateRoute><MyTips></MyTips></PrivateRoute>,
+       hydrateFallbackElement:<Loader></Loader>
       },
       {
         path:'/updateTip/:id',
          loader:({params})=>fetch(`http://localhost:3000/sharedtips/${params.id}`),
-        element:<PrivateRoute><UpdateTip></UpdateTip></PrivateRoute>
+        element:<PrivateRoute><UpdateTip></UpdateTip></PrivateRoute>,
+        hydrateFallbackElement:<Loader></Loader>
       },{
         path:'/explore-gardeners',
         loader:()=>fetch('http://localhost:3000/gardeners'),
-        Component:ExploreGardeners
+        Component:ExploreGardeners,
+        hydrateFallbackElement:<Loader></Loader>
       },
       {
         path:"/*",

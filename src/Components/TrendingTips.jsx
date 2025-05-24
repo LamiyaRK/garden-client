@@ -12,7 +12,7 @@ const TrendingTips = () => {
             setData(dat)
         })
     },[])
-    console.log(data)
+    //console.log(data)
     return (
         <div className='my-[100px]'>
             <div className='flex items-center justify-center  '>
