@@ -20,7 +20,7 @@ const Gardener = ({ac}) => {
     <p>{bio}</p>
       <p><span className='text-green-950 font-medium'>Age:</span> {age}</p>
         <p><span className='text-green-950 font-medium'>Gender:</span> {gender}</p>
-        <p className='flex gap-1 items-center'><span className='text-green-950 font-medium'>Experiences: </span>
+        <p className='flex flex-col xl:flex-row gap-2 xl:gap-1 xl:items-center '><span className='text-green-950 font-medium'>Experiences: </span>
         {
             experiences.map(exp=><span className='badge badge-accent badge-soft '>{exp}</span>)
         }

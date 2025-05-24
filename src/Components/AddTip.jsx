@@ -46,13 +46,13 @@ const addtip=e=>{
      
         <div>
           <h1 className="text-3xl font-bold text-center mb-3">Share Your Garden Wisdom</h1>
-          <p className="w-[70%] mx-auto text-center mb-6">
+          <p className="md:w-[70%] mx-auto text-center mb-6">
             Have a helpful gardening tip to share? Whether it's about composting, plant care, or indoor gardening — inspire others by contributing your green-thumb secrets! Fill out the form below to publish your tip to the community. 🌼
           </p>
         </div>
 
         {/* Form Fields */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid  grid-cols-1 md:grid-cols-2 gap-4">
           <fieldset className="fieldset w-full">
             <legend className="fieldset-legend text-[#0B3D2C]">Name</legend>
             <input type="text" className="input w-full" placeholder="Name" name="name" defaultValue={user?.displayName||''} readOnly />
@@ -112,14 +112,14 @@ const addtip=e=>{
             </select>
           </fieldset>
 
-          <fieldset className="fieldset col-span-2">
+          <fieldset className="fieldset md:col-span-2">
             <legend className="fieldset-legend text-[#0B3D2C]">Image URL</legend>
             <input type="url" className="input w-full" placeholder="Image URL" name="image" />
           </fieldset>
 
           <button
             type="submit"
-            className="btn w-full col-span-2 bg-green-950 border-green-400 border-2 text-white"
+            className="btn w-full md:col-span-2 bg-green-950 border-green-400 border-2 text-white"
           >
             Share Tip
           </button>

@@ -31,3 +31,8 @@ button:hover{
 .darkmode{
  background-color: black;
 }
+.active{
+ color:#00d084;
+ font-weight:600;
+ text-decoration: underline;
+}

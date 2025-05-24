@@ -23,11 +23,11 @@ const TipDetails = () => {
    }
     return (
         <div className='mx-auto w-5/6 bg-green-50 p-10 border-2 border-green-400 rounded-3xl my-[80px] shadow-2xl shadow-green-100'>
-        <div className='flex justify-around items-center gap-5'>
-            <div className='w-1/2'>
+        <div className='flex  flex-col lg:flex-row justify-around items-center gap-5'>
+            <div className='lg:w-1/2'>
                 <img src={image} className='h-[500px] rounded-3xl'></img>
             </div>
-            <div className='w-1/2 space-y-3'>
+            <div className='lg:w-1/2 space-y-3'>
                   <p className='text-3xl font-semibold text-[#0B3D2C] mb-6'>{title}</p>
                     <p className='text-lg text-green-800 font-medium'><span className='text-xl font-semibold text-[#0B3D2C]'>Plant Type/Topic: </span>{type}</p>
                       <p className='text-lg text-green-800 font-medium'><span className='text-xl font-semibold text-[#0B3D2C]'>Difficulty Level: </span>{difficulty}</p>

@@ -20,7 +20,7 @@ const TrendingTips = () => {
                         <img src={logo} className='h-[80px]  '></img>
                     </div>
          <Fade cascade>
-        <div className='mx-auto w-5/6  grid grid-cols-3 gap-5 mt-[40px]'>
+        <div className='mx-auto w-5/6  grid  md:grid-cols-2 lg:grid-cols-3 gap-5 mt-[40px]'>
             {
                 data.map(da=><TrendingTipdet da={da}></TrendingTipdet>)
             }

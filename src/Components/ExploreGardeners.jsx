@@ -17,7 +17,7 @@ const ExploreGardeners = () => {
         <p className=' text-gray-500 font-medium w-[80%] mx-auto text-center'> Discover passionate gardeners from our community! Each profile showcases their experience, gardening expertise, and the tips they've shared. Learn more about their journey and find inspiration from their green thumbs. 🌱
 
 </p>
-        <div className=' grid grid-cols-2 gap-7 mt-[50px]'>
+        <div className=' grid md:grid-cols-2 gap-7 mt-[50px]'>
             {
                 gardeners.map(ac=><Gardener key={ac._id} ac={ac}></Gardener>)
             }
