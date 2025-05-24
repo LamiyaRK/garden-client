@@ -1,12 +1,22 @@
-# React + Vite
+✅ Project Name:
+ Verdantia – Connect, Grow, Share
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌐 Live Site URL:
+https://gardensphere.web.app (Replace with your actual deployed URL)
 
-Currently, two official plugins are available:
+✨ Key Features:
+🌱 Tip Sharing: Users can post and explore plant care tips, categorized by difficulty and topic.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🧑‍🌾 Gardener Directory: Discover local gardeners with detailed profiles and connect with them.
 
-## Expanding the ESLint configuration
+❓ Q&A Section: Ask and answer gardening questions to learn and support others.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📅 Event Hub: Post or join community gardening events like workshops or plant swaps.
+
+🪴 Interest-Based Connections: Find users based on niche interests like hydroponics, composting, or balcony gardening.
+
+🌓 Dark Mode Support: Toggle between light and dark themes using DaisyUI for a better viewing experience.
+
+📋 Project Description:
+GardenSphere is an all-in-one platform built for gardening lovers to grow their community and their knowledge. Whether you're a beginner or a seasoned green thumb, the platform offers tools to share tips, connect with fellow gardeners, attend events, and dive into specific interests such as hydroponics, composting, and more. Designed with React, Tailwind CSS, DaisyUI, and MongoDB, it's a blooming space for inspiration, connection, and growth.
+
