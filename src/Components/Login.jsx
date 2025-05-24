@@ -1,12 +1,13 @@
 import React, { use } from 'react';
 import { FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
 
 const Login = () => {
     const {user,setUser,handlelogin}=use(AuthContext)
+    const navigate=useNavigate()
  const handleLogin=e=>{
     e.preventDefault();
     const form=e.target;
@@ -21,8 +22,9 @@ const Login = () => {
   icon: "success",
   draggable: true
   
-});
-
+}
+);
+navigate('/');
    })
 .catch(err=>
     toast(err,{

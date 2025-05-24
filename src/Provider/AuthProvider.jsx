@@ -8,15 +8,19 @@ const AuthProvider = ({children}) => {
  const [user,setUser]=useState(null)
   const [tips,setTips]=useState([]);
   const [theme,setTheme]=useState(false)
+  const [loading,setLoading]=useState(true);
   const  handlelogin=(email,pass)=>{
+    setLoading(true)
         return signInWithEmailAndPassword(auth,email,pass);
     }
     const  handleregister=(email,pass)=>{
+        setLoading(true)
         return createUserWithEmailAndPassword(auth,email,pass);
     }
      useEffect(()=>{
         const unSubscribe=onAuthStateChanged(auth,(Cuser)=>{
             setUser(Cuser)
+            setLoading(false)
            
         });
         return()=>{
@@ -59,7 +63,9 @@ const AuthProvider = ({children}) => {
  tips,
  setTips,
  theme,
- setTheme
+ setTheme,
+ loading,
+ setLoading
  
     }
     return (
