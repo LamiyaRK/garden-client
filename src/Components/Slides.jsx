@@ -6,7 +6,7 @@ const Slides = ({ da }) => {
     const {title,description,image,ctaText,date,time,location}=da
   return (
         <div
-  className="hero h-[500px]"
+  className="hero "
   style={{
     backgroundImage:
       `url(${image})`,
@@ -15,15 +15,15 @@ const Slides = ({ da }) => {
   <div className="hero-overlay"></div>
   <div className="hero-content text-neutral-content text-center">
     <div className="text-center">
-      <h1 className="mb-5 text-3xl font-bold">{title}</h1>
-      <p className="mb-5 text-xl  mx-auto max-w-lg">
+      <h1 className="mb-3 text-3xl font-bold">{title}</h1>
+      <p className="mb-3 text-base  mx-auto max-w-lg">
       {description}
       </p>
-      <p className="mb-5 text-lg flex  items-center justify-center gap-2">
+      <p className="mb-3 text-sm flex  items-center justify-center gap-2">
     <FaCalendar/>{date} </p>
-    <p className="mb-5 text-lg flex  items-center justify-center gap-2 "><FaClock/>{time}</p>
+    <p className="mb-3 text-sm flex  items-center justify-center gap-2 "><FaClock/>{time}</p>
      
-      <p className="mb-5 text-lg flex  items-center justify-center gap-2">
+      <p className="mb-3 text-sm flex  items-center justify-center gap-2">
    <FaLocationDot/> {location}
       </p>
      

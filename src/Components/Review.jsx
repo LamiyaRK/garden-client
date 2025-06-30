@@ -31,8 +31,8 @@ const Review = () => {
         <div>
               <div className='w-11/12 mx-auto my-[100px] text-center'>
               <div className='flex items-center justify-center'>
-                          <p className='badge text-xl bg-[#2A7D2E] h-12 rounded-3xl text-white text-center'> Testimonials</p>
-                          <img src={logo} className='h-[80px]  '></img>
+                          <p className='badge text-base bg-[#2A7D2E] h-8 rounded-3xl text-white text-center'> Testimonials 🌱</p>
+                         
                       </div>
             <h1 className='text-3xl text-[#0B3D2C] font-bold mb-5 text-center'>Customer Reviews</h1>
             <p className='text-lg text-gray-500 font-medium w-[80%] mx-auto text-center'>See what your customers are saying about their billing experience. Gather insights, build trust, and improve your service with real-time feedback and ratings.</p>

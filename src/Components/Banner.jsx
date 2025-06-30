@@ -53,7 +53,7 @@ const Banner = () => {
 
 
     return (
-         <div className='w-5/6    mx-auto my-10'>
+         <div className='w-5/6 h-2/3   mx-auto my-10'>
      <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}

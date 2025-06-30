@@ -13,10 +13,10 @@ const Navbar = () => {
  // console.log(user)
     const list=<>
       <NavLink to='/'> <li><a>Home</a></li></NavLink> 
-   {user&& <NavLink to='/Share-a-garden-tip'><li><a> Share a Garden Tip</a></li></NavLink> }  
+  
      <NavLink to='/Browse-tips'>  <li><a> Browse Tips</a></li></NavLink>
      <NavLink to='/explore-gardeners' > <li><a> Explore Gardeners</a></li></NavLink>  
- {user&&<NavLink to={`/My-tips/${user?.email}`}> <li><a> My Tips </a></li></NavLink> }  
+ 
            
     </>
   // console.log(theme)
@@ -44,8 +44,8 @@ const Navbar = () => {
     }
    
     return (
-        <div >
-           <div class="navbar  bg-[#0B3D2C]  shadow-sm text-white">
+        <div className='sticky top-0 z-50'>
+           <div className="navbar  bg-[#0B3D2C]  shadow-sm text-white">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -98,6 +98,8 @@ const Navbar = () => {
     >
      
       <li>
+       {user&& <NavLink to='/Share-a-garden-tip'><li className='text-[#0B3D2C]'><a> Share a Garden Tip</a></li></NavLink> }
+       {user&&<NavLink to={`/My-tips/${user?.email}`}> <li className='text-[#0B3D2C]'><a> My Tips </a></li></NavLink> }    
         <button className="btn bg-[#0B3D2C] text-white w-full" onClick={handleLogout}>
           Logout
         </button>

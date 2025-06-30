@@ -31,7 +31,7 @@ const Footer = () => {
               <div className='text-lg flex flex-col justify-center items-center space-y-3'>
               
               <p  className='text-3xl'>Legal</p>  
-            <p>Terms of use</p>
+          <a><p>Terms of uses</p></a> 
            <p>Privacy policy</p>
             <p>Cookie policy</p>
               

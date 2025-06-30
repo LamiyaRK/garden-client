@@ -33,12 +33,13 @@ const addtip=e=>{
     <div
       className="  justify-center  text-[#0B3D2C]">
      
-      
+     
       <div className="flex items-center justify-center gap-3 mt-6 w-5/6 mx-auto">
-        <p className="badge text-lg bg-[#2A7D2E] h-8 rounded-3xl text-white">
-          Garden Tip Submission
+      
+        <p className="badge text-base bg-[#2A7D2E] h-8 rounded-3xl text-white">
+          Garden Tip Submission🌱
         </p>
-        <img src={logo} alt="logo" className="h-[60px]" />
+       
       </div>
 
      

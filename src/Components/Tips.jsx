@@ -10,7 +10,7 @@ const Tips = ({tip}) => {
         <td>
           <div className="flex items-center gap-3 w-full ">
             <div className="avatar">
-              <div className="mask mask-squircle h-12 w-12">
+              <div className="mask mask-squircle h-8 w-12">
                 <img
                   src={`${image}||https://i.ibb.co/Q1rBJZD/fresh-red-tomatoes.jpg`} />
               </div>

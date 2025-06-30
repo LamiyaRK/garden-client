@@ -2,7 +2,7 @@
  Verdantia – Connect, Grow, Share
 
 🌐 Live Site URL:
-https://gardensphere.web.app (Replace with your actual deployed URL)
+https://garden-825e1.web.app/ (Replace with your actual deployed URL)
 
 ✨ Key Features:
 🌱 Tip Sharing: Users can post and explore plant care tips, categorized by difficulty and topic.

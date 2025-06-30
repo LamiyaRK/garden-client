@@ -16,8 +16,8 @@ const TrendingTips = () => {
     return (
         <div className='my-[100px]'>
             <div className='flex items-center justify-center  '>
-                        <p className='badge text-xl bg-[#2A7D2E] h-12 rounded-3xl text-white text-center'> Trending Tips</p>
-                        <img src={logo} className='h-[80px]  '></img>
+                        <p className='badge text-base bg-[#2A7D2E] h-8 rounded-3xl text-white text-center'> Trending Tips 🌱</p>
+                      
                     </div>
          <Fade cascade>
         <div className='mx-auto w-5/6  grid  md:grid-cols-2 lg:grid-cols-3 gap-5 mt-[40px]'>
